@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Thank You - Candela Robotic School</title>
+  <link rel="stylesheet" href="contact.css" />
+  <link rel="website icon" type="jpg" href="candela foto.jpg">
+  <script>
+    let countdown = 5;
+    window.onload = function() {
+      const countdownElement = document.getElementById('countdown');
+      const interval = setInterval(function() {
+        countdown--;
+        countdownElement.textContent = countdown;
+        if (countdown <= 0) {
+          clearInterval(interval);
+          window.location.href = "mainpage1.html";
+        }
+      }, 1000);
+    }
+  </script>
+</head>
+<body style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; background-color: #f9fafb; text-align: center;">
+
+  <h1 style="font-size: 2.5rem; color: #4f46e5;">Thank You!</h1>
+  <p style="font-size: 1.2rem; margin-top: 1rem;">Your message has been successfully sent. We will contact you as soon as possible.</p>
+  <p style="font-size: 1rem; margin-top: 0.5rem; color: #6b7280;">
+    You will be redirected to the main page in <span id="countdown">5</span> seconds...
+  </p>
+    <br> <br>
+    
+  <iframe src="https://lottie.host/embed/cc65d135-b004-493d-99f1-d3973ee70520/B2VK9z7cFc.lottie" style="border: none;"></iframe>
+
+</body>
+</html>
